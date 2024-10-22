@@ -6,7 +6,17 @@ const turnOnButton = document.getElementById('turn_on')
 const element = document.getElementById('lamp')
 
 turnOnButton.addEventListener('click', function() {
-    element.src = "./img/yellow_lamp.png"
-})
+    
+    element.classList.toggle('on')
+    if (element.classList.contains('on')){
+        element.src = "./img/yellow_lamp.png"
+        turnOnButton.innerText = 'Spegni'
+    } else {
+        element.src ="./img/white_lamp.png"
+        turnOnButton.innerText = 'Accendi'
+
+    }        
+}
+)
 
 
